@@ -1,0 +1,229 @@
+header{
+    position: fixed;
+    left: 0;
+    top: 20px;
+    width: 100%;
+    z-index: 999;
+}
+.header-main {
+    padding: 15px 20px;
+    border-radius: 16px;
+    box-shadow: 0px 10px 30px 0px #CFDCE126;
+    backdrop-filter: blur(7px);
+    background: #FFFFFF80;
+}
+.logo {
+    width: 105px;
+}
+
+.menu-mobile {
+    gap: 46px;
+    width: 100%;
+    justify-content: space-between;
+}
+.menu-scroll {
+    gap: 30px;
+}
+.menu-scroll a{
+    color: #273E4B;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    transition: 0.3s;
+    position: relative;
+    white-space: nowrap;
+}
+.menu-scroll a:hover{
+    opacity: 0.7;
+}
+.header-btn{
+    gap: 20px;
+}
+.header-btn .btn {
+    padding: 13px 30px;
+    font-size: 15px;
+    height: auto;
+}
+.open-menu{
+    display: none;
+}
+.close-menu {
+    display: none;
+}
+.close-menu span {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: relative;
+
+}
+
+.close-menu span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 3px;
+    position: relative;
+}
+.close-menu span:nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: -3px;
+}
+
+.close-menu span:nth-child(3){
+    display: none;
+}
+
+.body_fix {
+    overflow: hidden;
+}
+
+.menu-content{
+    width: 68%;
+}
+.menu-name-mob{
+    display: none;
+}
+
+.languages ul{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.languages ul li{
+    display: flex;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.languages ul li img{
+    width: 100%;
+}
+@media (max-width: 1199px) {
+    .menu-mobile {
+        gap: 103px;
+    }
+    .nav-menu ul {
+        gap: 30px;
+    }
+    .header-main {
+        padding: 15px;
+    }
+    .logo {
+        width: 185px;
+    }
+}
+@media (max-width: 1020px) {
+    .nav-menu{
+        position: relative;
+        z-index: 1;
+    }
+    .menu-name-mob{
+        display: block;
+    }
+
+    header {
+        top: 20px;
+    }
+    .open-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        transition: 0.3s;
+        z-index: 111111;
+        width: 24px;
+        height: 24px;
+    }
+    .open-menu span{
+        display: flex;
+        background: #1C1B1F;
+        width: 17px;
+        height: 2px;
+        transition: 0.3s;
+    }
+
+    .menu-content {
+        width: 100%;
+        position: fixed;
+        z-index: 99999;
+        top: -2px;
+        left: -2px;
+        transition: 0.5s;
+        height: 0;
+        overflow: hidden;
+
+    }
+    .transition-menu {
+        height: 365px;
+        -webkit-transition: all 0.5s ease 0s;
+        -o-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s;
+    }
+    .menu-mobile{
+        padding: 20px 20px 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        gap: 50px;
+        border-radius: 15px;
+        border: 3px solid #FFFFFFB2;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 30px 0px #CFDCE126;
+        backdrop-filter: blur(50px);
+
+    }
+    .nav-menu ul {
+        align-items: center;
+        gap: 30px 25px;
+        flex-wrap: wrap;
+        max-width: 189px;
+        width: 100%;
+    }
+    .menu-mobile .glob-tit-name{
+        display: flex;
+        margin: 0;
+    }
+    .header-btn {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        gap: 18px;
+    }
+    .menu-name-mob {
+        width: 100%;
+    }
+
+    .menu-name-mob .logo{
+        margin-top: -5px;
+        margin-left: -16px;
+    }
+    .header-btn .btn {
+        padding: 13px 30px;
+        font-size: 12px;
+    }
+
+
+    .header-main {
+        border-radius: 15px;
+    }
+    .nav-menu a {
+        padding: 0;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 10px;
+    }
+    header .btn-login {
+        font-size: 12px;
+    }
+}
+
