@@ -464,12 +464,12 @@ p{
 
 
 footer{
-    margin-top: 80px;
+    margin-top: 60px;
     padding-bottom: 40px;
 }
 .footer-main{
     gap: 20px;
-    background: rgba(6, 7, 2, 1);
+    background: #f7f7f7;
     padding: 30px;
     border-radius: 20px;
 
@@ -500,7 +500,7 @@ footer{
     font-weight: 400;
     font-size: 20px;
     line-height: 125%;
-    color: rgba(255, 255, 255, 1);
+    color: #000;
     position: relative;
 }
 .footer-menu a:after{
@@ -511,7 +511,8 @@ footer{
     transform: translateX(-50%);
     width: 0;
     height: 1px;
-    background: #FFFFFF;
+    background: #000;
+
     transition: 0.3s;
 }
 .footer-menu a:hover:after{
@@ -525,6 +526,10 @@ footer{
     align-items: flex-start;
     gap: 24px;
 }
+.footer-soc i{
+
+    filter: invert(1);
+}
 .mbi-street{
     gap: 10px;
 }
@@ -532,14 +537,16 @@ footer{
     font-weight: 400;
     font-size: 18px;
     line-height: 125%;
-    color: rgba(255, 255, 255, 1);
+    color: #000;
+
 }
 
 .footer-contact{
     display: flex;
     align-items: center;
     gap: 10px;
-    color: rgba(255, 255, 255, 1);
+    color: #000;
+
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
@@ -553,14 +560,16 @@ footer{
 .social-icons a{
     display: flex;
     transition: 0.3s;
-    width: 27px;
+    width: 32px;
+    justify-content: center;
 }
 
-.footer-fon{
-    background: rgba(6, 7, 2, 1);
-    padding: 24px 0;
-    margin-top: 80px;
+.social-icons a img{
+    filter: invert(1);
+
 }
+
+
 .footer-text{
     gap: 24px;
 
@@ -577,7 +586,8 @@ footer{
     font-weight: 500;
     font-size: 14px;
     line-height: 100%;
-    color: #FFFFFF;
+    color: #000;
+
 
 }
 
