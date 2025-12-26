@@ -1,0 +1,58 @@
+.single-pages{
+    margin-top: 200px;
+}
+
+
+
+
+.contact-page-flex {
+    gap: 18px;
+    margin-bottom: 0;
+    margin-top: 35px;
+}
+.contact-page-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 25%;
+    border-radius: 8px;
+    padding: 15px;
+    background: rgba(30, 30, 30, 1);
+
+}
+.contact-page-box p{
+    margin-bottom: 20px;
+    color: rgba(217, 217, 217, 1);
+    font-size: 16px;
+}
+.contact-page-box a{
+    display: block;
+    margin-bottom: 6px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+}
+.contact-page-box span{
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.contact-page-box ul{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.contact-page-box ul li{
+    display: flex;
+}
+
+.contact-page-box ul li a {
+    margin: 0;
+    display: flex;
+    width: 27px;
+    justify-content: center;
+    height: 28px;
+}

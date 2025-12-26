@@ -79,7 +79,22 @@ let projectsSwiper = new Swiper(".projects-slider", {
     pagination: {
         el: ".projects-pagination",
         clickable: true,
-    }
+    },
+    breakpoints: {
+        '1199': {
+            slidesPerView: 3,
+            spaceBetween: 16,
+        },
+        '767': {
+            slidesPerView: 2,
+            spaceBetween: 16,
+        },
+        '320': {
+            slidesPerView: 1,
+            spaceBetween: 12,
+        },
+    },
+
 });
 
 
@@ -98,9 +113,76 @@ let gallerySwiper = new Swiper(".gallery-slider", {
     pagination: {
         el: ".gallery-pagination",
         clickable: true,
-    }
+    },
+    breakpoints: {
+        '1199': {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        '767': {
+            slidesPerView: 2,
+            spaceBetween: 16,
+        },
+        '320': {
+            slidesPerView: 1,
+            spaceBetween: 12,
+        },
+    },
 });
 
 
 
 
+
+
+
+
+
+
+let partnerswiper = new Swiper(".partners-slider", {
+    slidesPerView: 8,
+    spaceBetween: 30,
+    loop: true,
+    allowTouchMove: false,
+    speed: 5000,
+    breakpoints: {
+        '1700': {
+            slidesPerView: 8,
+            spaceBetween: 30,
+        },
+        '1599': {
+            slidesPerView: 7,
+            spaceBetween: 20,
+        },
+        '1400': {
+            slidesPerView: 6,
+            spaceBetween: 20,
+        },
+        '1200': {
+            slidesPerView: 5,
+            spaceBetween: 20,
+        },
+        '1020': {
+            slidesPerView: 5,
+            spaceBetween: 20,
+            speed: 4500,
+
+        },
+        '767': {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        '570': {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        '320': {
+            slidesPerView: 2,
+            spaceBetween: 12,
+        },
+    },
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+    }
+});
