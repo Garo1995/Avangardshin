@@ -170,6 +170,9 @@ p{
 .about-us{
     margin-top: 150px;
 }
+.about-us-page{
+    padding-top: 10px;
+}
 
 .about-us-box{
     display: flex;
@@ -321,7 +324,7 @@ p{
 
 
 .gallery-main{
-    margin-top: 120px;
+    margin-top: 100px;
 }
 .gallery-cnt{
     margin-top: 40px;
@@ -338,7 +341,12 @@ p{
 .gallery-photo img{
     border-radius: 10px;
 }
-
+.about-text{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 .swiper-button-next, .swiper-button-prev{
     border-radius: 50%;
@@ -346,6 +354,7 @@ p{
     height: 50px;
     background: rgba(255, 255, 255, 1);
     z-index: 2;
+    margin: -37px 0 0;
 }
 .swiper-button-prev{
     left: 10px;
@@ -382,7 +391,7 @@ p{
 
 
 .partners-main{
-    margin-top: 120px;
+    margin-top: 100px;
 }
 
 .partners-cnt{
@@ -581,7 +590,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: 19px;
 }
 .footer-soc i{
 
@@ -614,11 +623,12 @@ footer{
 .social-icons{
     gap: 20px;
 }
-.social-icons a{
+.social-icons a {
     display: flex;
     transition: 0.3s;
-    width: 32px;
+    width: 28px;
     justify-content: center;
+    height: 26px;
 }
 .social-icons a:hover{
     opacity: 0.7;
@@ -1030,5 +1040,15 @@ footer{
     .logo-footer {
         justify-content: center;
         display: flex;
+    }
+    .swiper-pagination-bullet {
+        width: 30px;
+        height: 3px;
+    }
+    .footer-soc {
+        gap: 18px;
+    }
+    .footer-main {
+        gap: 35px;
     }
 }

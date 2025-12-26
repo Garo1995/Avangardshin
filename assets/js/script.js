@@ -1,3 +1,43 @@
+$(function () {
+    const $header = $("header");
+    if (!$header.length) return;
+
+    let lastY = window.scrollY;
+    let ticking = false;
+
+    const SHOW_AFTER = 10;
+    const HIDE_AFTER = 10;
+
+    $header.addClass("header-scroll");
+
+    function run() {
+        const y = window.scrollY;
+        const diff = y - lastY;
+
+        if (Math.abs(diff) < 2) { ticking = false; return; }
+
+        if (diff > HIDE_AFTER && y > $header.outerHeight()) {
+            $header.addClass("header-hidden");
+        }
+        if (diff < -SHOW_AFTER) {
+            $header.removeClass("header-hidden");
+        }
+
+        lastY = y;
+        ticking = false;
+    }
+
+    $(window).on("scroll", function () {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(run);
+        }
+    });
+});
+
+
+
+
 $(document).ready(function () {
     $('.open-menu').on('click', function () {
         $(this).toggleClass('close-menu');
@@ -19,40 +59,6 @@ $(document).ready(function () {
 });
 
 
-
-
-
-$(function () {
-    let Accordion = function (el, multiple) {
-        this.el = el || {};
-        this.multiple = multiple || false;
-        let links = this.el.find('.link');
-        links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
-    };
-
-    Accordion.prototype.dropdown = function (e) {
-        let $el = e.data.el;
-        $this = $(this),
-            $next = $this.next();
-        $next.slideToggle();
-        if (!e.data.multiple) {
-
-            $el.find('.submenu-faq').not($next).slideUp();
-        }
-        if (!$this.hasClass('open')) {
-            $('.link').each(function () {
-                $(this).removeClass('open')
-            })
-            $this.addClass('open')
-        } else {
-            $this.removeClass('open')
-        }
-    }
-
-    let accordion = new Accordion($('#accordion'), false);
-});
-
-
 $('.menu-scroll a').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
         && location.hostname == this.hostname) {
@@ -67,8 +73,6 @@ $('.menu-scroll a').click(function() {
         }
     }
 });
-
-
 
 
 let projectsSwiper = new Swiper(".projects-slider", {
@@ -96,9 +100,6 @@ let projectsSwiper = new Swiper(".projects-slider", {
     },
 
 });
-
-
-
 
 
 let gallerySwiper = new Swiper(".gallery-slider", {
@@ -129,14 +130,6 @@ let gallerySwiper = new Swiper(".gallery-slider", {
         },
     },
 });
-
-
-
-
-
-
-
-
 
 
 let partnerswiper = new Swiper(".partners-slider", {
@@ -185,4 +178,35 @@ let partnerswiper = new Swiper(".partners-slider", {
         delay: 0,
         disableOnInteraction: false,
     }
+});
+
+
+
+
+
+let singleSwiper = new Swiper(".single-sm-slider", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        '570': {
+            slidesPerView: 4,
+            spaceBetween: 10,
+        },
+        '320': {
+            slidesPerView: 3,
+            spaceBetween: 12,
+        },
+    },
+});
+let swiper2 = new Swiper(".single-slider", {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: singleSwiper,
+    },
 });
